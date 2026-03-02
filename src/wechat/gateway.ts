@@ -1,11 +1,11 @@
-import { Router } from 'express';
+import { Router, type Router as RouterType } from 'express';
 import { verifySignature } from './crypto.js';
 import { parseXML } from '../utils/xml.js';
 import { enqueueMessage } from '../queue/producer.js';
 import { checkRateLimit } from '../utils/rateLimit.js';
 import { logger } from '../utils/logger.js';
 
-export const wechatGateway = Router();
+export const wechatGateway: RouterType = Router();
 
 /**
  * GET /webhook — WeChat server verification (echostr handshake).
