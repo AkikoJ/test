@@ -1,0 +1,33 @@
+{
+  "name": "wechat-product-advisor",
+  "version": "1.0.0",
+  "description": "微信服务号智能选品推荐系统",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx src/db/seed.ts"
+  },
+  "dependencies": {
+    "bullmq": "^5.0.0",
+    "dotenv": "^16.0.0",
+    "drizzle-orm": "^0.39.0",
+    "express": "^4.21.0",
+    "ioredis": "^5.4.0",
+    "openai": "^4.0.0",
+    "postgres": "^3.4.0",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@types/xml2js": "^0.4.0",
+    "drizzle-kit": "^0.30.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}
